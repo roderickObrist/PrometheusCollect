@@ -1,0 +1,26 @@
+[Unit]
+Description=Orderbook logging
+
+After=syslog.target
+After=network.target
+
+Wants=ob-logger@Bitfinex.service \
+ ob-logger@GDAX.service \
+ ob-logger@Bitstamp.service \
+ ob-logger@FX.service \
+ ob-logger@Margin.service \
+ ob-logger@Gemini.service \
+ ob-logger@Binance.service \
+ ob-logger@GDAX-EUR.service \
+ ob-logger@GDAX-GBP.service \
+ ob-logger@GDAX-USDC.service \
+ ob-logger@Bitstamp-EUR.service \
+ ob-logger@Bitstamp-GBP.service \
+ ob-logger@BitFlyer.service \
+ ob-logger@Kraken.service \
+ ob-logger@Kraken-EUR.service \
+ ob-logger@Kraken-GBP.service \
+ ob-logger@Kraken-JPY.service
+
+[Install]
+WantedBy=multi-user.target

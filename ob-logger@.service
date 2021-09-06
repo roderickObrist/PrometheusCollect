@@ -1,0 +1,14 @@
+[Unit]
+Description=OrderBook logger for %i
+
+PartOf=logger.target
+
+[Service]
+User=USERNAME
+ExecStart=/usr/bin/node ???? %i
+
+Restart=on-failure
+RestartSec=1
+
+StartLimitBurst=3
+StartLimitInterval=10
